@@ -4,9 +4,11 @@ print('**********************************')
 
 numeroSecreto = 18
 
-chute = input('Digite um número')
+chuteString = input('Digite um número: ')
 
-print('Você digitou o número',chute)
+print('Você digitou o número: ',chuteString)
+
+chute = int (chuteString)
 
 if numeroSecreto == chute:
     print('Você acertou!!!!')
