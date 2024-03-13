@@ -7,22 +7,24 @@ numeroSecreto = 18
 
 #Definindo o número de tentativas
 numeroTentativas = 3
+rodada = 1
 
-while(numeroTentativas > 0):
-    
+
+while(rodada<= numeroTentativas):
+    print('Tentativa',rodada, 'de' , numeroTentativas)
 #Recebendo o chute do jogador
     chuteString = input('Digite um número: ')
-    print('Você digitou o número: ',chuteString)
     chute = int(chuteString)
 
 #Declarando as condições 
-    if numeroSecreto == chute:
+    if (numeroSecreto == chute):
         print('Você acertou!!!!')
+        Break
     elif(chute>numeroSecreto):
-        print('Você errou!! O número secreto é um nùmero menor')
+        print('Você errou!! O número secreto é um número menor')
     else:
         print('Você errou!!! O número secreto é um número maior')
 
-        numeroTentativas = numeroTentativas - 1
-
+    #numeroTentativas = numeroTentativas - 1
+    rodada = rodada + 1
     #Aula Elif 26.02.24
