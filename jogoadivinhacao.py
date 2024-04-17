@@ -5,12 +5,16 @@ print('Bem vindo, ao JOGO DE ADIVINHAÇÃ0')
 print('**********************************')
 
 #Definindo o número secreto
-numeroSecreto = round(random.random()*100)
+numeroSecreto = random.randrange(1,101)
 #print(numeroSecreto)
-
 #Definindo o número de tentativas
-numeroTentativas = 3
+numeroTentativas = 12
 rodada = 1
+
+print('Qual o nível de dificuldade?')
+print('(1)-Fácil, (2)-Médio, (3)-Difícil')
+
+nível = int(input('Defina o nível: '))
 
 
 while(rodada<= numeroTentativas):
