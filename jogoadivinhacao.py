@@ -36,14 +36,14 @@ while(rodada<= numeroTentativas):
 
 #Declarando as condições 
     if (numeroSecreto == chute):
-        print('Você acertou!!!!')
+        print('Você acertou!!!! E sua pontuação foi:', pontos)
         Break
     elif(chute>numeroSecreto):
         print('Você errou!! O número secreto é um número menor')
     else:
         print('Você errou!!! O número secreto é um número maior')
 
-    pontos_perdidos = abs(numeroSecreto - chute)
+    pontos_perdidos = abs (numeroSecreto - chute);
     pontos = pontos - pontos_perdidos
     #numeroTentativas = numeroTentativas - 1
     rodada = rodada + 1
