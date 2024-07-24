@@ -9,6 +9,7 @@ def jogar_forca():
 
     enforcou = False
     acertou = False
+    erros  = 0
 
     #Enquanto o jogador não se "enforcar" E não acertar a palavra, faça algo
     while(not enforcou and not acertou):
@@ -19,12 +20,20 @@ def jogar_forca():
         for letra in palavraSecreta:
             if(chute.upper() == letra.upper()):
               letras_acertadas[index] = letra
-            index = index + 1      
+            index += 1 #index = index +1
+        else:
+            erros += 1 #erros = erros + 1
 
-            print(letras_acertadas)
+        enforcou = erros ==7
+        acertou= "_" not in letras_acertadas
+        print(letras_acertadas)            
 
-            print('Escolha uma palavra!')
-
+        print('Escolha outra letra!')
+        
+    if(acertou):
+         print("Você acertou!!")
+    else:
+        print("Você perdeu o jogo!!")
 
     print("Fim de jogo!")
 if(__name__ == "__main__"):
