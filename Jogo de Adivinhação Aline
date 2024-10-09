@@ -1,0 +1,12 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Imprime o cabeçalho do jogo
+    printf("****************************************\n");
+    printf("*Bem vindo ao nosso jogo de adivinhação*\n");
+    printf("****************************************\n");
+    
+    int numerosecreto = 15;
+    printf("%d é o número secreto. Não conta para ninguém!\n",numerosecreto);
+}
